@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Navigation, Router } from '@angular/router';
+import { ActivatedRoute, Navigation, NavigationExtras, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
 
 @Component({
@@ -38,7 +38,12 @@ export class PreguntaSecretaPage implements OnInit {
 
   public validarRespuestaSecreta(): void {
     if (this.usuario.respuestaSecreta === this.respuesta) {
-      this.router.navigate(['/verificado']);
+      const navigationExtras: NavigationExtras = {
+        state: {
+          usuario: this.usuario
+        }
+      };
+      this.router.navigate(['/verificado'], navigationExtras);
     }
     else {
       this.router.navigate(['/incorrecto']);

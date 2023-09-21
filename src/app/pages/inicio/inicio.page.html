@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar color="width">
     <ion-grid>
@@ -17,12 +18,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
-  
-  <div class="ion-padding-vertical">
-
-    <ion-card class="ion-text-center ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical imagen-de-fondo">
 
       <ion-card-title class="ion-text-center">
         <ion-label>
@@ -47,8 +45,43 @@
     
       <video #video [hidden]="!escaneando" width="100%"></video>
       <canvas #canvas hidden></canvas>
+<table>
+  <tr>
+    <td>Bloque de inicio</td>
+    <td>{{bloqueInicio}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
       
-     {{bloqueInicio}}     
+     
      <br>
      {{bloqueTermino}}
      <br>
@@ -69,7 +102,6 @@
      {{sede}}
 
     </ion-card>
-  </div>
 
   <ion-label class="centrar">
     <a routerLink="">Cerrar sesion</a>

@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-title class="ion-padding-top ion-text-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" width="100px" />
+    <ion-label>
+      <p>Sistema de Asistencia DUOC</p>
+    </ion-label>
+  </ion-title>
+  
+  <div class="ion-padding-vertical">
+
+    <ion-card class="ion-text-center ion-padding-vertical">
+
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h2>¡Bienvenido!</h2>
+        </ion-label>
+      </ion-card-title>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input label="correo" labelPlacement="floating" type="text" [(ngModel)]="usuario.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Contraseña" labelPlacement="floating" type="password" [(ngModel)]="usuario.password"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button shape="block" (click)="ingresar()">Ingresar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+
+  <ion-label class="centrar">
+    <br>
+    <a [routerLink]="['/correo']">Recuperar contraseña</a>
+  </ion-label>
+  
+</ion-content>

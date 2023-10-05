@@ -3,7 +3,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-3 col-md-6 class="ion-align-items-center ion-justify-content-center">
-          <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" style="max-width: 100px;">
+          <img class="logo" src="assets/images/logo.png">
         </ion-col>
         <ion-col col-9 col-md-6 class="ion-align-items-center">
           <ion-title #titulo class="ion-text-center">
@@ -27,7 +27,7 @@
       <ion-card-title class="ion-text-center">
         <ion-label>
           <h2>¡Bienvenido!</h2>
-          <p><b> {{ usuario.nombre }} </b></p>
+          <p>* {{ usuario.nombre }} *</p>
         </ion-label>
       </ion-card-title>
       <p>Escanea el codigo QR para registrar tu asistencia a clases</p>
@@ -45,54 +45,54 @@
       <video #video [hidden]="!escaneando" width="100%"></video>
       <canvas #canvas hidden></canvas>
   
-      <table class="centrar">
-        <br>
-        <tr>
-          <td><b>DATOS DE LA ASIGNATURA </b></td>
-        </tr>
-        <br>
-        <tr>
-          <td>Sede : </td>
-          <td>{{sede}}</td>
-        </tr>
-        <tr>
-          <td>Sigla :</td>
-          <td>{{idAsignatura}}</td>
-        </tr>
-        <tr>
-          <td>Sección :</td>
-          <td>{{seccion}}</td>
-        </tr>
-        <tr>
-          <td>Nombre asignatura :</td>
-          <td>{{nombreAsignatura}}</td>
-        </tr>
-        <tr>
-          <td>Nombre profesor :</td>
-          <td>{{nombreProfesor}}</td>
-        </tr>
-        <tr>
-          <td>Día :</td>
-          <td>{{dia}}</td>
-        </tr>
-        <tr>
-          <td>Bloque de inicio :</td>
-          <td>{{bloqueInicio}}</td>
-        </tr>
-        <tr>
-          <td>Bloque término :</td>
-          <td>{{bloqueTermino}}</td>
-        </tr>
-        <tr>
-          <td>Hora de inicio :</td>
-          <td>{{horaInicio}}</td>
-        </tr>
-        <tr>
-          <td>Hora de término :</td>
-          <td>{{horaFin}}</td>
-        </tr>
-      </table>
+      <br>
+      <td class="centrar"><b>DATOS DE LA ASIGNATURA </b></td>
 
+      <div class="ion-padding-horizontal">
+        <table class="tabla-excel">
+          <br>
+          <tr>
+            <td class="etiqueta"><b>Sede:</b></td>
+            <td class="respuesta">{{ sede }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Sigla:</b></td>
+            <td class="respuesta">{{ idAsignatura }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Sección:</b></td>
+            <td class="respuesta">{{ seccion }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Nombre asignatura:</b></td>
+            <td class="respuesta">{{ nombreAsignatura }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Nombre profesor:</b></td>
+            <td class="respuesta">{{ nombreProfesor }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Dia:</b></td>
+            <td class="respuesta">{{ dia }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Bloque de inicio:</b></td>
+            <td class="respuesta">{{ bloqueInicio }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Bloque de termino:</b></td>
+            <td class="respuesta">{{ bloqueTermino }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Hora de inicio:</b></td>
+            <td class="respuesta">{{ horaInicio }}</td>
+          </tr>
+          <tr>
+            <td class="etiqueta"><b>Hora de termino:</b></td>
+            <td class="respuesta">{{ horaFin }}</td>
+          </tr>
+        </table>
+      </div>
     </ion-card>
   </div>
 

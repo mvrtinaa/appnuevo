@@ -1,6 +1,31 @@
 .centrar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangulo {
+  border: 1px solid #ccc; /* Añade un borde de 1px de ancho en color gris */
+  padding: 10px; /* Agrega un espacio alrededor del contenido del rectángulo */
+  margin-bottom: 10px; /* Agrega espacio entre los rectángulos */
+}
+
+.tabla-excel {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-excel td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.etiqueta {
+  background-color: #f2f2f2;
+}
+
+.respuesta {
+  background-color: #ffffff;
+}

@@ -16,6 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class InicioPage implements OnInit, AfterViewInit  {
 
   // Las siguientes variables son para acceder a los controles graficos
+  // y poder usar Angular Material
 
   @ViewChild('titulo', { read: ElementRef, static: true}) titulo!: ElementRef;
 

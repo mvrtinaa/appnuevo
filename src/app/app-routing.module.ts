@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'pregunta-secreta',
     loadChildren: () => import('./pages/pregunta-secreta/pregunta-secreta.module').then( m => m.PreguntaSecretaPageModule)
   },
+  {
+    path: 'miclase',
+    loadChildren: () => import('./pages/miclase/miclase.module').then( m => m.MiclasePageModule)
+  },
 ];
 
 @NgModule({

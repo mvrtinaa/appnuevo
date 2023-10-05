@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import { Router, NavigationExtras, ActivatedRoute, Navigation } from '@angular/router';
+import { Usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-verificado',
@@ -7,19 +8,25 @@ import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
   styleUrls: ['./verificado.page.scss'],
 })
 export class VerificadoPage implements OnInit {
-
-  public password: string = '';
+  public usuario : Usuario = new Usuario('','','','','');
 
   constructor(private activatedRoute: ActivatedRoute,private router: Router) {
+    this.activatedRoute.queryParams.subscribe(params => {
 
-    // this.activatedRoute.queryParams.subscribe(params => {
-    //   if (this.router.getCurrentNavigation().extras.state) {
-    //     this.password = this.router.getCurrentNavigation().extras.state.password;
-    //   }
-    // });
+      const nav: Navigation| null = this.router.getCurrentNavigation();
+
+      if (nav) {
+        if (nav.extras.state) {
+          this.usuario = nav.extras.state['usuario'];
+          return;
+        }
+      }
+
+      this.router.navigate(['/login']);
+
+    });
    }
 
   ngOnInit() {
   }
-
 }
